@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     @IBAction func playMusicAction(_ sender: UIButton) {
         let playing = UIStoryboard(name: "Main", bundle: nil)
         guard let nextScreen = playing.instantiateViewController(withIdentifier: "PlayMusic") as? PlayViewController else { return }
-        nextScreen.modalPresentationStyle = .automatic
+        nextScreen.modalPresentationStyle = .fullScreen
         
         if sender.tag == 0 {
             choiseMusic(musicName: "9ka", player: &nextScreen.player)
